@@ -13,7 +13,7 @@ export class Home extends Component {
                 About Me
                 <p>
                     I’m a game programmer who thrives at the intersection of art, science, and problem-solving.
-                    My journey began in sound recording technology, where I explored the rich interplay between
+                    My academic journey began in sound recording technology, where I explored the rich interplay between
                     mathematics and music.
                     My fascination with sound processing and data visualization led me to shift gears, pursuing a dual
                     major in computer science and mathematics.
