@@ -10,7 +10,6 @@ export class Home extends Component {
                 <h2>Senior Game Programmer | Unity Expert | Polymath | Lifetime Learner</h2>
                 <hr/>
                 <h3>About Me</h3>
-                About Me
                 <p>
                     I’m a game programmer who thrives at the intersection of art, science, and problem-solving.
                     My academic journey began in sound recording technology, where I explored the rich interplay between
