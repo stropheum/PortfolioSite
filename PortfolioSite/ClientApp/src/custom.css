@@ -18,3 +18,22 @@ body {
     color: #bbbbbb;
     font-size: large;
 }
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+div#root {
+    height: 100%; /* remove this line to see div.app is no more 100% height */
+    background-color: #181818;
+    padding: 0 30px;
+}
+
+div.app {
+    height: 100%;
+    background-color: cornsilk;
+}
