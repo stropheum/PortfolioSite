@@ -7,7 +7,7 @@ export class Samples extends Component {
         return (
             <div>
                 <h1>Samples</h1>
-                <h2>TODO: Project samples go here</h2>
+                <h2>Under Construction - Check back soon for cool toys to play with!</h2>
             </div>
         );
     }
