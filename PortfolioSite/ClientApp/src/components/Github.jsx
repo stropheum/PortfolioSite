@@ -16,6 +16,12 @@ export class Github extends Component {
                 <p>My Github Profile. Where I host personal passion projects, potential solo endeavors, and technical
                     studies that I use as artifacts of my personal growth.</p>
                 <hr/>
+                <a href="https://github.com/stropheum/Snap" target="_blank" rel="noopener noreferrer"
+                   className="custom-link">
+                    Snap
+                </a>
+                <p>My most recent project. I'm attempting to recreate Marvel Snap as a technical study in Unity</p>
+                <hr/>
                 <a href="https://github.com/stropheum/D-Squared-Engine" target="_blank" rel="noopener noreferrer"
                    className="custom-link">
                     D-Squared Engine
