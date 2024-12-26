@@ -28,8 +28,9 @@ body {
 }
 
 div#root {
-    height: 100%; /* remove this line to see div.app is no more 100% height */
+    height: 100%;
     background-color: #181818;
+    font-size: large;
     padding: 0 30px;
 }
 
