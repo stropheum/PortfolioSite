@@ -1,14 +1,12 @@
 import React from 'react';
 import './LogoGrid.css';
 import rdr2 from "./assets/logos/rdr2.png";
-import gta6 from "./assets/logos/gta6.png";
 import proEra1 from "./assets/logos/proera1.png";
 import proEra2 from "./assets/logos/proera2.jpg";
 import proEra2025 from "./assets/logos/proera2025.jpg";
 
 const logos = [
     rdr2,
-    gta6,
     proEra1,
     proEra2,
     proEra2025,
