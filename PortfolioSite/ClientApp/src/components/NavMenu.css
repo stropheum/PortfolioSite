@@ -15,23 +15,32 @@ html {
     }
 }
 
-.mainNavBar {
+.main-nav-bar {
+    background-color: #181818;
+    border-color: rgba(0, 255, 255, 0.7);
+    border-radius: 8px;
+    border-style: ridge;
+    border-width: 6px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, .45);
+}
+
+.main-nav-bar-item {
+    background-color: #181818;
     border-color: rgba(0, 255, 255, 0.7);
     border-radius: 8px;
     border-style: outset;
-    margin: 5px;
+    margin: 3px 5px;
     transition: transform 0.15s ease, background-color 0.15s ease-in-out, border-radius 0.15s ease, margin 0.15s ease;
     /*transform: scale(1.0);*/
 }
 
-.mainNavBar:hover {
+.main-nav-bar-item:hover {
     background-color: rgba(0, 255, 255, 0.55);
-    border-color: white;
+    border-color: rebeccapurple;
     border-radius: 12px;
-    margin-left: 6px;
-    margin-right: 6px;
+    margin: 3px 4px;
     text-decoration-color: black;
-    transform: scale(1.15);
+    transform: scale(1.2);
 }
 
 .box-shadow {

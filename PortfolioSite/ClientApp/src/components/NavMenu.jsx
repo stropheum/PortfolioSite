@@ -24,14 +24,14 @@ export class NavMenu extends Component {
     render() {
         return (
             <header>
-                <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" dark>
+                <Navbar className="main-nav-bar navbar-expand-sm navbar-toggleable-sm mb-3" dark>
                     <Container>
-                        <NavbarBrand>Portfolio</NavbarBrand>
+                        <NavbarBrand>Navigation</NavbarBrand>
                         <NavbarToggler onClick={this.toggleNavbar} className="mr-2"/>
                         <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed}
                                   navbar>
                             <ul className="navbar-nav flex-grow">
-                                <NavItem className="mainNavBar">
+                                <NavItem className="main-nav-bar-item">
                                     <NavLink tag={Link} className="text-light" to="/">Home</NavLink>
                                 </NavItem>
                                 {/*<NavItem>*/}
@@ -40,13 +40,13 @@ export class NavMenu extends Component {
                                 {/*<NavItem>*/}
                                 {/*    <NavLink tag={Link} className="text-light" to="/fetch-data">Fetch data</NavLink>*/}
                                 {/*</NavItem>*/}
-                                <NavItem className="mainNavBar">
+                                <NavItem className="main-nav-bar-item">
                                     <NavLink tag={Link} className="text-light" to="/samples">Samples</NavLink>
                                 </NavItem>
-                                <NavItem className="mainNavBar">
+                                <NavItem className="main-nav-bar-item">
                                     <NavLink tag={Link} className="text-light" to="/Resume">Resume</NavLink>
                                 </NavItem>
-                                <NavItem className="mainNavBar">
+                                <NavItem className="main-nav-bar-item">
                                     <NavLink tag={Link} className="text-light" to="/Github">Github</NavLink>
                                 </NavItem>
                             </ul>
