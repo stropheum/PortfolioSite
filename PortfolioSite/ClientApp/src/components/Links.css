@@ -1,0 +1,8 @@
+.custom-link {
+    color: darkcyan;
+    font-weight: bold;
+}
+
+.custom-link:hover {
+    text-decoration: underline;
+}
