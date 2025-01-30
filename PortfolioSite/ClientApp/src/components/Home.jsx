@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import LogoGrid from "./LogoGrid";
+import GithubCalendar from "./GithubCalendar";
 // import GithubCalendar from "./GithubCalendar";
 
 export class Home extends Component {
@@ -11,8 +12,8 @@ export class Home extends Component {
                 <h1>Dale Diaz</h1>
                 <h3>Senior Game Programmer | Unity Expert | Polymath | Lifetime Learner</h3>
                 <hr/>
-                {/*<GithubCalendar username="Stropheum" />*/}
-                {/*<hr/>*/}
+                <GithubCalendar username="Stropheum" />
+                <hr/>
                 <h1 align="center">About Me</h1>
                 <p>
                     I’m a game programmer who thrives at the intersection of art, science, and problem-solving.

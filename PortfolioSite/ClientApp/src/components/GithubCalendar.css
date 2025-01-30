@@ -1,0 +1,19 @@
+﻿.github-calendar-container {
+    background-color: #1b1b1b00;  /* Dark background for the container */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #ffffff;  /* White text color */
+}
+
+.github-calendar-title {
+    color: #ff6347;  /* Tomato color for the title */
+    font-family: 'Arial', sans-serif;
+}
+
+.github-calendar-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Optional shadow effect */
+}
