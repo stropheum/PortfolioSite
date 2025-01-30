@@ -1,33 +1,44 @@
 import React, {Component} from 'react';
-// import React from "react";
 import YouTube from "react-youtube";
+import './Samples.css';
 
 const VideoEmbed = () => {
     const opts = {
-        height: "576",
-        width: "1024",
+        height: "100%",
+        width: "100%",
         quality: "1080",
         playerVars: {
             autoplay: 1, // Autoplay the video
         },
     };
     const opts_no_autoplay = {
-        height: "576",
-        width: "1024",
+        height: "100%",
+        width: "100%",
         quality: "1080",
         playerVars: {
             autoplay: 0,
         },
     };
+    const youtubeEmbedContainer = "youtube-embed-container";
+    const youtubeEmbedVideo = "youtube-embed-video";
 
     return (
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
-            <h2>Hex Visualizer</h2>
-            <h3>Leveraging DOTS and signal processing to make pretty things to look at</h3>
-            <YouTube videoId="8QoQzeEf6jY" opts={opts}/>
-            <h2>Hex Visualizer</h2>
-            <h3>Leveraging DOTS and signal processing to make pretty things to look at</h3>
-            <YouTube videoId="QeR5xUprkFI" opts={opts_no_autoplay}/>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+            <div style={{ display: "flex", flexDirection: "column", marginLeft: "0" }}>
+                <h2>Hex Visualizer</h2>
+                <p>Leveraging DOTS and signal processing to make pretty things to look at</p>
+            </div>
+            <div className={youtubeEmbedContainer}>
+                <YouTube videoId="8QoQzeEf6jY" opts={opts} className={youtubeEmbedVideo} />    
+            </div>
+            {/*<div style={{ display: "flex", flexDirection: "column", marginLeft: "0" }}>*/}
+            <div>
+                <h2>The Logician</h2>
+                <p>FIEA capstone project that I pitched and was a core developer on over a 9 month period</p>
+            </div>
+            <div className={youtubeEmbedContainer}>
+                <YouTube videoId="QeR5xUprkFI" opts={opts_no_autoplay} className={youtubeEmbedVideo} />
+            </div>
         </div>
     );
 };
@@ -38,8 +49,7 @@ export class Samples extends Component {
     render() {
         return (
             <div>
-                <h1>Samples</h1>
-                <h2>Some videos and embedded demos of my projects</h2>
+                <h4 align={"center"}>Some videos and embedded demos of my projects</h4>
                 <hr/>
                 <VideoEmbed />
                 <hr/>

@@ -12,7 +12,7 @@ export class Home extends Component {
                 <h3>Senior Game Programmer | Unity Expert | Polymath | Lifetime Learner</h3>
                 <hr/>
                 {/*<GithubCalendar username="Stropheum" />*/}
-                <hr/>
+                {/*<hr/>*/}
                 <h1 align="center">About Me</h1>
                 <p>
                     I’m a game programmer who thrives at the intersection of art, science, and problem-solving.

@@ -28,7 +28,7 @@ html {
   display: flex;
   justify-content: flex-start;
   padding: 5px 15px;
-  width: 90%;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
