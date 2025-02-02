@@ -15,6 +15,7 @@ export class Github extends Component {
                 </h1>
                 <p>My Github Profile. Where I host personal passion projects, potential solo endeavors, and technical
                     studies that I use as artifacts of my personal growth.</p>
+                
                 <hr/>
                 <a href="https://github.com/stropheum/HexVisualizer" target="_blank" rel="noopener noreferrer"
                    className="custom-link">

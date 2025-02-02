@@ -1,0 +1,99 @@
+﻿.card
+{
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 2em;
+    width: auto;
+    background: #001818;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    opacity: 100%;
+    overflow: visible;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card::after, .card::before {
+    --border-width: 8px;
+    content: '';
+    position: absolute;
+    height: calc(100% + var(--border-width));
+    width: calc(100% + var(--border-width));
+    background: conic-gradient(from var(--angle), cyan, transparent, cyan, transparent, cyan, transparent, cyan);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: 0;
+    border-radius: 10px;
+    animation: 7s spin linear infinite;
+}
+
+.card::after {
+    z-index: -1;
+    opacity: 100%;
+}
+
+.card::before {
+    z-index: -2;
+    filter: blur(1.5rem);
+    opacity: 0.25;
+}
+
+.card-no-alignment
+{
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 2em;
+    width: auto;
+    background: #001818;
+    border-radius: 10px;
+    position: relative;
+    opacity: 100%;
+    overflow: visible;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card-no-alignment::after, .card-no-alignment::before {
+    --border-width: 8px;
+    content: '';
+    position: absolute;
+    height: calc(100% + var(--border-width));
+    width: calc(100% + var(--border-width));
+    background: conic-gradient(from var(--angle), cyan, transparent, cyan, transparent, cyan, transparent, cyan);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: 0;
+    border-radius: 10px;
+    animation: 7s spin linear infinite;
+}
+
+.card-no-alignment::after {
+    z-index: -1;
+    opacity: 100%;
+}
+
+.card-no-alignment::before {
+    z-index: -2;
+    filter: blur(1.5rem);
+    opacity: 0.25;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}

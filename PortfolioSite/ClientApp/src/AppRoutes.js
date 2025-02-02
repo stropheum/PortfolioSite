@@ -4,6 +4,7 @@ import { Home } from "./components/Home";
 import {Samples} from "./components/Samples";
 import {Resume} from "./components/Resume";
 import {Github} from "./components/Github";
+import Card from "./components/Card";
 
 const AppRoutes = [
   {
@@ -33,6 +34,10 @@ const AppRoutes = [
     path: '/fetch-data',
     element: <FetchData />
   },
+  {
+    path: '/card',
+    element: <Card />
+  }
 ];
 
 export default AppRoutes;

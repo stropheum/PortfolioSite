@@ -23,21 +23,32 @@ const VideoEmbed = () => {
     const youtubeEmbedVideo = "youtube-embed-video";
 
     return (
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-            <div style={{ display: "flex", flexDirection: "column", marginLeft: "0" }}>
-                <h2>Hex Visualizer</h2>
-                <p>Leveraging DOTS and signal processing to make pretty things to look at</p>
+        <div>
+            {/*Hex Visualizer*/}
+            <div className="card-no-alignment">
+                <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+                    <div style={{display: "flex", flexDirection: "column", marginLeft: "0"}}>
+                        <h2>Hex Visualizer</h2>
+                        <p>Leveraging DOTS and signal processing to make pretty things to look at</p>
+                    </div>
+                    <div className={youtubeEmbedContainer}>
+                        <YouTube videoId="8QoQzeEf6jY" opts={opts} className={youtubeEmbedVideo}/>
+                    </div>
+                </div>
             </div>
-            <div className={youtubeEmbedContainer}>
-                <YouTube videoId="8QoQzeEf6jY" opts={opts} className={youtubeEmbedVideo} />    
-            </div>
-            {/*<div style={{ display: "flex", flexDirection: "column", marginLeft: "0" }}>*/}
-            <div>
-                <h2>The Logician</h2>
-                <p>FIEA capstone project that I pitched and was a core developer on over a 9 month period</p>
-            </div>
-            <div className={youtubeEmbedContainer}>
-                <YouTube videoId="QeR5xUprkFI" opts={opts_no_autoplay} className={youtubeEmbedVideo} />
+            <hr/>
+
+            {/*Logician*/}
+            <div className="card-no-alignment">
+                <div style={{display: "flex", flexDirection: "column", marginLeft: "0"}}>
+                    <div>
+                        <h2>The Logician</h2>
+                        <p>FIEA capstone project that I pitched and was a core developer on over a 9 month period</p>
+                    </div>
+                    <div className={youtubeEmbedContainer}>
+                        <YouTube videoId="QeR5xUprkFI" opts={opts_no_autoplay} className={youtubeEmbedVideo}/>
+                    </div>
+                </div>
             </div>
         </div>
     );
@@ -51,7 +62,7 @@ export class Samples extends Component {
             <div>
                 <h4 align={"center"}>Some videos and embedded demos of my projects</h4>
                 <hr/>
-                <VideoEmbed />
+                <VideoEmbed/>
                 <hr/>
             </div>
         );
