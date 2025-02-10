@@ -109,6 +109,14 @@ export class Github extends Component {
                     Github project itself. This is my first foray into React, so judge me gently. I figured it's a
                     perfect
                     excuse to get some learning in.</p>
+                <hr/>
+                <a href="https://github.com/stropheum/DeformableMesh" target="_blank" rel="noopener noreferrer"
+                   className="custom-link">
+                    Deformable Mesh
+                </a>
+                <p>A procedural mesh project using Unity and deployed to WebGL, where the user can deform a mesh with 
+                mouse interaction, with a simple shader that augments color gradient and emission based on depth.
+                Mesh also self-heals over time</p>
             </div>
         );
     }
