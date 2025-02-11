@@ -38,7 +38,7 @@ const VideoEmbed = () => {
             </div>
             <hr/>
 
-            {/*Logicianbfump*/}
+            {/*Logician*/}
             <div className="card-no-alignment">
                 <div style={{display: "flex", flexDirection: "column", marginLeft: "0"}}>
                     <div>
