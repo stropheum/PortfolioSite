@@ -24,10 +24,10 @@ const VideoEmbed = () => {
 
     return (
         <div>
-            {/*Hex Visualizekjkjkjjkjkjr*/}
+            {/*Hex Visualizer*/}
             <div className="card-no-alignment">
                 <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
-                    <div style={{display: "flex", flexDirection: "column", marginLeft: "0"}}>
+                    <div style={{display: "flex", flexDirectiron: "column", marginLeft: "0"}}>
                         <h2>Hex Visualizer</h2>
                         <p>Leveraging DOTS and signal processing to make pretty things to look at</p>
                     </div>
