@@ -33,7 +33,7 @@ const VideoEmbed = () => {
                         <YouTube videoId="8QoQzeEf6jY" opts={opts} className={youtubeEmbedVideo}/>
                     </div>
                     <div className={youtubeEmbedContainer}>
-                        <YouTube videoId="oBIULjBv9Bs " opts={opts} className={youtubeEmbedVideo}/>
+                        <YouTube videoId="oBIULjBv9Bs " opts={opts_no_autoplay} className={youtubeEmbedVideo}/>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@ const VideoEmbed = () => {
                     <h2>Nisgab</h2>
                     <p>A simple code generation tool for automatically generating global action bindings for unity's input system</p>
                     <div className={youtubeEmbedContainer}>
-                        <YouTube videoId="SyeoqOclxF4" opts={opts_no-autoplay} className={youtubeEmbedVideo}/>
+                        <YouTube videoId="SyeoqOclxF4" opts={opts_no_autoplay} className={youtubeEmbedVideo}/>
                     </div>
                 </div>
             </div>
