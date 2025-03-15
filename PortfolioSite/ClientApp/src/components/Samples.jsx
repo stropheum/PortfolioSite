@@ -27,12 +27,25 @@ const VideoEmbed = () => {
             {/*Hex Visualizer*/}
             <div className="card-no-alignment">
                 <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
-                    <div style={{display: "flex", flexDirectiron: "column", marginLeft: "0"}}>
-                        <h2>Hex Visualizer</h2>
-                        <p>Leveraging DOTS and signal processing to make pretty things to look at</p>
-                    </div>
+                    <h2>Hex Visualizer</h2>
+                    <p>Leveraging DOTS and signal processing to make pretty things to look at</p>
                     <div className={youtubeEmbedContainer}>
                         <YouTube videoId="8QoQzeEf6jY" opts={opts} className={youtubeEmbedVideo}/>
+                    </div>
+                    <div className={youtubeEmbedContainer}>
+                        <YouTube videoId="oBIULjBv9Bs " opts={opts} className={youtubeEmbedVideo}/>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+
+            {/*Nisgab*/}
+            <div className="card-no-alignment">
+                <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+                    <h2>Nisgab</h2>
+                    <p>A simple code generation tool for automatically generating global action bindings for unity's input system</p>
+                    <div className={youtubeEmbedContainer}>
+                        <YouTube videoId="SyeoqOclxF4" opts={opts} className={youtubeEmbedVideo}/>
                     </div>
                 </div>
             </div>
