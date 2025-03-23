@@ -34,7 +34,7 @@ const VideoEmbed = () => {
                     </div>
                     <hr/>
                     <div className={youtubeEmbedContainer}>
-                        <YouTube videoId="oBIULjBv9Bs " opts={opts_no_autoplay} className={youtubeEmbedVideo}/>
+                        <YouTube videoId="oBIULjBv9Bs" opts={opts_no_autoplay} className={youtubeEmbedVideo}/>
                     </div>
                 </div>
             </div>
