@@ -40,6 +40,18 @@ const VideoEmbed = () => {
             </div>
             <hr/>
 
+            {/*HallCrawl*/}
+            <div className="card-no-alignment">
+                <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+                    <h2>HallCrawl</h2>
+                    <p>A simple shooter game I'm building to improve my UE5 knowledge base</p>
+                    <div className={youtubeEmbedContainer}>
+                        <YouTube videoId="7pfnAtpJf9U" opts={opts_no_autoplay} className={youtubeEmbedVideo}/>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+
             {/*Nisgab*/}
             <div className="card-no-alignment">
                 <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
