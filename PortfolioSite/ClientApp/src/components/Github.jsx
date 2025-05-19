@@ -17,17 +17,26 @@ export class Github extends Component {
                     studies that I use as artifacts of my personal growth.</p>
                 
                 <hr/>
+                <a href="https://https://github.com/stropheum/GasGun" target="_blank" rel="noopener noreferrer"
+                   className="custom-link">
+                    GasGun
+                </a>
+                <p>Leveraging DOTS, signal processing, visual effects and shaders to make pretty abstract scenes</p>
+                
+                <hr/>
                 <a href="https://github.com/stropheum/HexVisualizer" target="_blank" rel="noopener noreferrer"
                    className="custom-link">
                     Hex Visualizer
                 </a>
                 <p>Leveraging DOTS, signal processing, visual effects and shaders to make pretty abstract scenes</p>
+                
                 <hr/>
                 <a href="https://github.com/stropheum/Snap" target="_blank" rel="noopener noreferrer"
                    className="custom-link">
                     Snap
                 </a>
                 <p>Attempting to recreate Marvel Snap as a technical study in Unity</p>
+                
                 <hr/>
                 <a href="https://github.com/stropheum/D-Squared-Engine" target="_blank" rel="noopener noreferrer"
                    className="custom-link">
@@ -39,6 +48,7 @@ export class Github extends Component {
                     opened my eyes to what a game engine is and can be, as well as how much of a nightmare it can be
                     trying to create a unified experience across multiple graphical frameworks. DirectX makes me
                     sad.</p>
+                
                 <hr/>
                 <a href="https://github.com/stropheum/Hivemind" target="_blank" rel="noopener noreferrer"
                    className="custom-link">
@@ -48,6 +58,7 @@ export class Github extends Component {
                     Karaboga to optimize server selection based on observing bee food source selection behavior).
                     Used to demonstrate the theory that through no direct inter-hive communication, hives that
                     otherwise should starve out competitors will instead have emergent cooperative behavior</p>
+                
                 <hr/>
                 <a href="https://github.com/stropheum/VoiceMeter" target="_blank" rel="noopener noreferrer"
                    className="custom-link">
@@ -65,6 +76,7 @@ export class Github extends Component {
                     as well as straight up filibustering to give the appearance of dominating the conversation. The goal
                     of this tool is to market it to debate streamers such that they can have an indisputable data-driven
                     reference for how fair an interlocutor is being during a conversation.</p>
+                
                 <hr/>
                 <a href="https://github.com/stropheum/CrackHud" target="_blank" rel="noopener noreferrer"
                    className="custom-link">
@@ -78,6 +90,7 @@ export class Github extends Component {
                     content. Unfortunately I didn't read the fine print and Wizards of the coast has extremely
                     prohibitive
                     IP utilization clauses, so this project got mothballed, but the tech is quite fascinating.</p>
+                
                 <hr/>
                 <a href="https://github.com/stropheum/Voxel-Terrain-Generator" target="_blank" rel="noopener noreferrer"
                    className="custom-link">
@@ -93,6 +106,7 @@ export class Github extends Component {
                     a highly performant terrain generation tool that has minimal GPU overdraw and optimal runtime</p>
                 computation performance. I would love to make another pass at this utilizing DOTS for the chunk
                 generation, though.
+                
                 <hr/>
                 <a href="https://github.com/stropheum/RTS" target="_blank" rel="noopener noreferrer"
                    className="custom-link">
@@ -100,6 +114,7 @@ export class Github extends Component {
                 </a>
                 <p>This is a slow-going RTS project I'm using as a foundation for Unreal Engine skill building and exploration.
                     The end goal is to have a simple functional RTS game with editor tools such as a map editor</p>
+                
                 <hr/>
                 <a href="https://github.com/stropheum/PortfolioSite" target="_blank" rel="noopener noreferrer"
                    className="custom-link">
@@ -109,6 +124,7 @@ export class Github extends Component {
                     Github project itself. This is my first foray into React, so judge me gently. I figured it's a
                     perfect
                     excuse to get some learning in.</p>
+                
                 <hr/>
                 <a href="https://github.com/stropheum/DeformableMesh" target="_blank" rel="noopener noreferrer"
                    className="custom-link">

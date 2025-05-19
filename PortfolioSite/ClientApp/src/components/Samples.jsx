@@ -40,6 +40,18 @@ const VideoEmbed = () => {
             </div>
             <hr/>
 
+            {/*GasGun*/}
+            <div className="card-no-alignment">
+                <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+                    <h2>GasGun</h2>
+                    <p>A highly customizable gun-based game using the gameplay ability system</p>
+                    <div className={youtubeEmbedContainer}>
+                        <YouTube videoId="SkMGIFy6trA" opts={opts_no_autoplay} className={youtubeEmbedVideo}/>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+
             {/*HallCrawl*/}
             <div className="card-no-alignment">
                 <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
