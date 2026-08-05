@@ -76,6 +76,14 @@
   --border-color: #2e3b1a;
 }
 
+[data-theme='greyscale'] {
+  --text-color: #bbbbbb;
+  --header-color: #ffffff;
+  --accent-color: #999999;
+  --accent-rgb: 153, 153, 153;
+  --border-color: #444444;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);

@@ -13,7 +13,7 @@ export const NavMenu = () => {
   const navigate = useNavigate();
 
   const themes = [
-    { id: 'default', name: 'LOOM', color: '#ff5f33' },
+    { id: 'default', name: 'EMBER', color: '#ff5f33' },
     { id: 'matrix', name: 'PHOSPHOR', color: '#00ff41' },
     { id: 'cobalt', name: 'COBALT', color: '#64ffda' },
     { id: 'crimson', name: 'CRIMSON', color: '#ff3333' },
@@ -22,7 +22,10 @@ export const NavMenu = () => {
     { id: 'frost', name: 'FROST', color: '#88c0d0' },
     { id: 'rose', name: 'ROSE', color: '#ff79c6' },
     { id: 'lime', name: 'LIME', color: '#a6e22e' },
+    { id: 'greyscale', name: 'NOIRE', color: '#999999' },
   ];
+
+  const themeCols = Math.ceil(themes.length / Math.ceil(themes.length / 8));
 
   const searchIndex = [
     { title: 'Home', path: '/', category: 'Page' },
@@ -193,7 +196,7 @@ export const NavMenu = () => {
 
         <div className="sidebar-group">
           <div className="sidebar-label">THEME</div>
-          <div className="theme-switcher">
+          <div className="theme-switcher" style={{ '--theme-cols': themeCols }}>
             {themes.map(t => (
               <button 
                 key={t.id}
