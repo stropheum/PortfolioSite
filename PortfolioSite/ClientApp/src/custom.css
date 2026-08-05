@@ -1,12 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
 
 :root {
-  --bg-color: #0e0e0e;
+  --bg-color: #121212;
+  --bg-table: #0b0b0b;
+  --bg-light: #1a1a1a;
   --text-color: #cccccc;
   --header-color: #ffffff;
   --accent-color: #ff5f33;
+  --accent-rgb: 255, 95, 51;
   --border-color: #333333;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+[data-theme='matrix'] {
+  --text-color: #00ff41;
+  --header-color: #00ff41;
+  --accent-color: #00ff41;
+  --accent-rgb: 0, 255, 65;
+  --border-color: #003b00;
+}
+
+[data-theme='cobalt'] {
+  --text-color: #8892b0;
+  --header-color: #ccd6f6;
+  --accent-color: #64ffda;
+  --accent-rgb: 100, 255, 218;
+  --border-color: #233554;
+}
+
+[data-theme='crimson'] {
+  --text-color: #e0c2c2;
+  --header-color: #ffffff;
+  --accent-color: #ff3333;
+  --accent-rgb: 255, 51, 51;
+  --border-color: #4a1a1a;
+}
+
+[data-theme='gold'] {
+  --text-color: #d4d4d4;
+  --header-color: #ffffff;
+  --accent-color: #ffcc33;
+  --accent-rgb: 255, 204, 51;
+  --border-color: #3d3428;
+}
+
+[data-theme='amethyst'] {
+  --text-color: #d8dee9;
+  --header-color: #ffffff;
+  --accent-color: #bf94ff;
+  --accent-rgb: 191, 148, 255;
+  --border-color: #3b2b4d;
+}
+
+[data-theme='frost'] {
+  --text-color: #d8dee9;
+  --header-color: #ffffff;
+  --accent-color: #88c0d0;
+  --accent-rgb: 136, 192, 208;
+  --border-color: #2e3440;
+}
+
+[data-theme='rose'] {
+  --text-color: #d8dee9;
+  --header-color: #ffffff;
+  --accent-color: #ff79c6;
+  --accent-rgb: 255, 121, 198;
+  --border-color: #4a2b3b;
+}
+
+[data-theme='lime'] {
+  --text-color: #d8dee9;
+  --header-color: #ffffff;
+  --accent-color: #a6e22e;
+  --accent-rgb: 166, 226, 46;
+  --border-color: #2e3b1a;
 }
 
 body {
@@ -14,6 +81,11 @@ body {
   color: var(--text-color);
   font-family: var(--font-mono);
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+*, *::before, *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {

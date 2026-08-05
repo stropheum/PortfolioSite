@@ -20,7 +20,7 @@
     width: 100%;
     border-collapse: collapse;
     border: 1px solid var(--border-color);
-    background-color: var(--bg-color);
+    background-color: var(--bg-table);
     font-family: var(--font-mono);
 }
 
@@ -47,11 +47,11 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    background-color: rgba(255, 95, 51, 0.05);
+    background-color: rgba(var(--accent-rgb), 0.05);
 }
 
 .header-row {
-    background-color: rgba(255, 95, 51, 0.05);
+    background-color: rgba(var(--accent-rgb), 0.05);
 }
 
 .value-cell {

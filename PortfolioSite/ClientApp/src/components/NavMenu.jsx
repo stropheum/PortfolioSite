@@ -7,9 +7,22 @@ export const NavMenu = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [results, setResults] = useState([]);
   const [showResults, setShowResults] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState(localStorage.getItem('theme') || 'default');
   const searchRef = useRef(null);
   const containerRef = useRef(null);
   const navigate = useNavigate();
+
+  const themes = [
+    { id: 'default', name: 'LOOM', color: '#ff5f33' },
+    { id: 'matrix', name: 'PHOSPHOR', color: '#00ff41' },
+    { id: 'cobalt', name: 'COBALT', color: '#64ffda' },
+    { id: 'crimson', name: 'CRIMSON', color: '#ff3333' },
+    { id: 'gold', name: 'GOLD', color: '#ffcc33' },
+    { id: 'amethyst', name: 'AMETHYST', color: '#bf94ff' },
+    { id: 'frost', name: 'FROST', color: '#88c0d0' },
+    { id: 'rose', name: 'ROSE', color: '#ff79c6' },
+    { id: 'lime', name: 'LIME', color: '#a6e22e' },
+  ];
 
   const searchIndex = [
     { title: 'Home', path: '/', category: 'Page' },
@@ -57,6 +70,15 @@ export const NavMenu = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+  useEffect(() => {
+    if (currentTheme === 'default') {
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+    }
+    localStorage.setItem('theme', currentTheme);
+  }, [currentTheme]);
 
   const handleSearch = (e) => {
     const query = e.target.value;
@@ -167,6 +189,22 @@ export const NavMenu = () => {
           <div className="sidebar-item">
             <NavLink className="sidebar-link" to="/github">Github</NavLink>
           </div>
+        </div>
+
+        <div className="sidebar-group">
+          <div className="sidebar-label">THEME</div>
+          <div className="theme-switcher">
+            {themes.map(t => (
+              <button 
+                key={t.id}
+                className={`theme-btn ${currentTheme === t.id ? 'active' : ''}`}
+                onClick={() => setCurrentTheme(t.id)}
+                title={t.name}
+                style={{ '--theme-color': t.color }}
+              />
+            ))}
+          </div>
+          <div className="theme-name">{themes.find(t => t.id === currentTheme)?.name}</div>
         </div>
       </div>
     </nav>
