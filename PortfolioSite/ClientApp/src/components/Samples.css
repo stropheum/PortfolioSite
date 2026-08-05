@@ -132,6 +132,7 @@
 .side-nav-link:hover {
     color: var(--accent-color);
     opacity: 1;
+    text-decoration: none;
 }
 
 .side-nav-link:hover::before {

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { samplesData } from './samplesData';
 import { tracksData } from './tracksData';
+import { resumeData } from './resumeData';
 import './NavMenu.css';
 
 export const NavMenu = () => {
@@ -36,6 +37,11 @@ export const NavMenu = () => {
     { title: 'Samples', path: '/samples', category: 'Page' },
     ...samplesData.map(s => ({ title: s.title, path: `/samples/${s.id}`, category: 'Sample' })),
     { title: 'Resume', path: '/resume', category: 'Page' },
+    { title: 'Experience', path: '/resume#experience', category: 'Section' },
+    { title: 'Selected Projects (Resume)', path: '/resume#projects', category: 'Section' },
+    { title: 'Education', path: '/resume#education', category: 'Section' },
+    { title: 'Technical Stack', path: '/resume#technical-stack', category: 'Section' },
+    { title: 'Awards', path: '/resume#awards', category: 'Section' },
     { title: 'Github', path: '/github', category: 'Page' },
     { title: 'GasGun (GitHub)', path: '/github#gasgun', category: 'Project' },
     { title: 'Hex Visualizer (GitHub)', path: '/github#hexvisualizer', category: 'Project' },
