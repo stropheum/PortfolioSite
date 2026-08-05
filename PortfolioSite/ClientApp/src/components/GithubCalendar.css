@@ -30,6 +30,22 @@
     stroke-width: 0.5px;
 }
 
+.calendar-block {
+    fill: #0c0c0c;
+    animation-name: calendarSweep;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes calendarSweep {
+    0% {
+        fill: #0c0c0c;
+    }
+    100% {
+        fill: var(--target-color);
+    }
+}
+
 .github-calendar-wrapper rect:hover {
     stroke: var(--accent-color);
     stroke-width: 1px;
