@@ -7,7 +7,6 @@ const GitHubCalendarComponent = ({ username }) => {
     const totalDurationRef = useRef(30000);
     
     const durationFactor = 2; // ms per level of contribution
-    const idleTime = 5000; // ms to stay full before restarting
 
     // Custom theme for version 5+
     const theme = {
@@ -24,7 +23,7 @@ const GitHubCalendarComponent = ({ username }) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setAnimKey(prev => prev + 1);
-        }, totalDurationRef.current + idleTime);
+        }, 60000); // Recycle interval: once per minute
         
         return () => clearTimeout(timer);
     }, [animKey]);

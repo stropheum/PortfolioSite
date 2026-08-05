@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { samplesData } from './samplesData';
+import { tracksData } from './tracksData';
 import './NavMenu.css';
 
 export const NavMenu = () => {
@@ -47,6 +48,7 @@ export const NavMenu = () => {
     { title: 'RTS Project (GitHub)', path: '/github#rts', category: 'Project' },
     { title: 'Personal Portfolio Website (GitHub)', path: '/github#portfoliosite', category: 'Project' },
     { title: 'Deformable Mesh (GitHub)', path: '/github#deformablemesh', category: 'Project' },
+    ...tracksData.map(t => ({ title: t.title, path: t.url, category: 'Track' })),
   ];
 
   useEffect(() => {
@@ -103,6 +105,11 @@ export const NavMenu = () => {
     setSearchQuery('');
     setResults([]);
     setShowResults(false);
+    
+    if (path.startsWith('http')) {
+      window.open(path, '_blank');
+      return;
+    }
     
     if (path.includes('#')) {
       const [basePath, hash] = path.split('#');
@@ -191,6 +198,25 @@ export const NavMenu = () => {
           </div>
           <div className="sidebar-item">
             <NavLink className="sidebar-link" to="/github">Github</NavLink>
+          </div>
+        </div>
+
+        <div className="sidebar-group">
+          <div className="sidebar-label">MY MUSIC</div>
+          <div className="sidebar-tracks">
+            {tracksData.map(track => (
+              <div key={track.id} className="sidebar-track">
+                <iframe 
+                  title={track.title}
+                  width="100%" 
+                  height="120" 
+                  scrolling="no" 
+                  frameBorder="no" 
+                  allow="autoplay" 
+                  src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(track.url)}&color=ff5f33&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false`}
+                />
+              </div>
+            ))}
           </div>
         </div>
 
