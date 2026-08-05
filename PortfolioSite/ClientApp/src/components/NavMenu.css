@@ -200,7 +200,6 @@ html {
 
 .sidebar-track iframe {
   display: block;
-  filter: invert(100%) hue-rotate(180deg) brightness(0.8) contrast(1.2);
 }
 
 .sub-link {
