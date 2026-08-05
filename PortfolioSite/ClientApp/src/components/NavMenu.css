@@ -35,8 +35,14 @@ html {
 .main-content {
   flex: 1;
   margin-left: 260px;
-  padding: 2rem;
+  padding: 0; /* Let internal content handle padding */
   background-color: var(--bg-color);
+}
+
+.content-wrapper {
+  padding: 4rem;
+  max-width: 1600px;
+  margin: 0; /* Left adjust */
 }
 
 .sidebar-header {
