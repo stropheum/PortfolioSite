@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import "./Card";
 import "./Samples.css";
 
 export class Resume extends Component {

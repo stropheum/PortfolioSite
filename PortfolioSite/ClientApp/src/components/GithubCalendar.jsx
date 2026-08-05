@@ -1,32 +1,31 @@
 ﻿import React from 'react';
+import { GitHubCalendar } from 'react-github-calendar';
 import "./GithubCalendar.css";
 
-const GitHubCalendar = ({ username, backgroundColor = '#282c34', textColor = '#ffffff', titleColor = '#ff6347' }) => {
-    const calendarUrl = `https://ghchart.rshah.org/${username}`;
-    
-    const containerStyle = {
-        backgroundColor: backgroundColor,
-        color: textColor,
-        padding: '20px',
-        borderRadius: '8px',
-        textAlign: 'center',
+const GitHubCalendarComponent = ({ username }) => {
+    // Custom theme for version 5+
+    const theme = {
+        dark: [
+            '#1a1a1a', // level 0 (background-light)
+            'rgba(var(--accent-rgb), 0.2)',
+            'rgba(var(--accent-rgb), 0.4)',
+            'rgba(var(--accent-rgb), 0.7)',
+            'var(--accent-color)', // level 4
+        ],
     };
-    
-    const titleStyle = {
-        color: titleColor,
-        fontFamily: 'Arial, sans-serif',
-    };
-    
-    const calendarContainer = "github-calendar-container";
-    const calendarTitle = "github-calendar-title";
-    const calendarImage = "github-calendar-image";
 
     return (
-        <div className={calendarContainer}>
-            <h2 className={calendarTitle}></h2>
-            <img className={calendarImage} src={calendarUrl} alt="GitHub Contributions Calendar" />
+        <div className="github-calendar-wrapper">
+            <GitHubCalendar 
+                username={username}
+                theme={theme}
+                fontSize={12}
+                blockSize={12}
+                blockMargin={4}
+                showWeekdayLabels
+            />
         </div>
     );
 };
 
-export default GitHubCalendar;
+export default GitHubCalendarComponent;

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import YouTube from "react-youtube";
 import { samplesData } from './samplesData';

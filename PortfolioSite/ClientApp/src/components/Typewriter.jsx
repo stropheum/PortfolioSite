@@ -33,7 +33,7 @@ const Typewriter = ({ elements, speed = 80, deleteSpeed = 40, waitTime = 2000, s
     }
 
     return () => clearTimeout(timer);
-  }, [displayText, isDeleting, elementIndex, elements, speed, deleteSpeed, waitTime]);
+  }, [displayText, isDeleting, elementIndex, elements, speed, deleteSpeed, waitTime, suffix]);
 
   return (
     <span style={{ display: 'inline-block' }}>

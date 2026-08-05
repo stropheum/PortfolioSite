@@ -20,12 +20,10 @@ const AppRoutes = [
     element: <Samples />
   },
   {
-    index: true,
     path: '/resume',
     element: <Resume />
   },
   {
-    index: true,
     path: '/github',
     element: <Github />
   },

@@ -5,7 +5,7 @@ import Typewriter from "./Typewriter";
 import './Samples.css';
 
 export class Home extends Component {
-    static displayName = this.name;
+    static displayName = "Home";
 
     render() {
         return (

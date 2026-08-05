@@ -1,18 +1,36 @@
-﻿.github-calendar-container {
-    background-color: transparent;
-    text-align: center;
-    color: var(--text-color);
+﻿.github-calendar-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    font-family: var(--font-mono);
+    width: 100%;
 }
 
-.github-calendar-title {
-    color: var(--accent-color);
-    font-family: var(--font-mono);
+/* Ensure the calendar chart is centered */
+.github-calendar-wrapper > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Target labels and text inside the SVG */
+.github-calendar-wrapper text {
+    fill: var(--text-color) !important;
+    font-family: var(--font-mono) !important;
+    font-size: 10px !important;
     text-transform: uppercase;
 }
 
-.github-calendar-image {
-    width: 100%;
-    height: auto;
-    border: 1px solid var(--border-color);
-    box-shadow: none;
+/* Remove any rounding from the blocks if the library adds them */
+.github-calendar-wrapper rect {
+    rx: 0;
+    ry: 0;
+    stroke: rgba(0,0,0,0.1);
+    stroke-width: 0.5px;
+}
+
+.github-calendar-wrapper rect:hover {
+    stroke: var(--accent-color);
+    stroke-width: 1px;
 }
