@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import "./Card";
+import "./Samples.css";
 
 export class Resume extends Component {
     static displayName = Resume.name;
@@ -17,16 +18,31 @@ export class Resume extends Component {
                 </style>
 
                 {/* Render the iframe with the CSS variable for height */}
-                <div className="card">
-                    <iframe
-                        src="https://docs.google.com/document/d/e/2PACX-1vRKxJPgzRnxKNCPioitY4qX-nEd4miYswBVFgIWwarRzWpBciqMTMnXK0WyTZcDF7v8Gq_kIeOkfy2M/pub?embedded=true"
-                        style={{
-                            width: '100%',
-                            height: 'var(--iframe-max-height)',
-                            border: 'none',
-                        }}
-                        title="Resume"
-                    ></iframe>
+                <div className="sample-table-container">
+                    <table className="sample-table">
+                        <tbody>
+                            <tr>
+                                <td className="line-number">01</td>
+                                <td className="label-cell">DOCUMENT</td>
+                                <td className="value-cell" style={{ color: 'var(--accent-color)', fontWeight: 'bold' }}>CURRICULUM VITAE</td>
+                            </tr>
+                            <tr>
+                                <td className="line-number">02</td>
+                                <td className="label-cell">VIEW</td>
+                                <td className="value-cell">
+                                    <iframe
+                                        src="https://docs.google.com/document/d/e/2PACX-1vRKxJPgzRnxKNCPioitY4qX-nEd4miYswBVFgIWwarRzWpBciqMTMnXK0WyTZcDF7v8Gq_kIeOkfy2M/pub?embedded=true"
+                                        style={{
+                                            width: '100%',
+                                            height: 'var(--iframe-max-height)',
+                                            border: 'none',
+                                        }}
+                                        title="Resume"
+                                    ></iframe>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </>
         );

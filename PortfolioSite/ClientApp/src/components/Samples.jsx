@@ -1,101 +1,94 @@
-import React, {Component} from 'react';
+﻿import React from 'react';
+import { useParams, Link } from 'react-router-dom';
 import YouTube from "react-youtube";
+import { samplesData } from './samplesData';
 import './Samples.css';
+import './Links.css';
 
-const VideoEmbed = () => {
-    const opts = {
+const SampleCard = ({ sample, isDetail = false }) => {
+    const opts = (autoplay) => ({
         height: "100%",
         width: "100%",
         quality: "1080",
         playerVars: {
-            autoplay: 1, // Autoplay the video
+            autoplay: autoplay ? 1 : 0,
         },
-    };
-    const opts_no_autoplay = {
-        height: "100%",
-        width: "100%",
-        quality: "1080",
-        playerVars: {
-            autoplay: 0,
-        },
-    };
-    const youtubeEmbedContainer = "youtube-embed-container";
-    const youtubeEmbedVideo = "youtube-embed-video";
+    });
+
+    return (
+        <div className="sample-table-container">
+            <table className="sample-table">
+                <tbody>
+                    <tr>
+                        <td className="line-number">01</td>
+                        <td className="label-cell">NAME</td>
+                        <td className="value-cell">
+                            {isDetail ? (
+                                <span style={{ color: 'var(--accent-color)', fontWeight: 'bold' }}>{sample.title}</span>
+                            ) : (
+                                <Link to={`/samples/${sample.id}`} className="custom-link">
+                                    {sample.title}
+                                </Link>
+                            )}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="line-number">02</td>
+                        <td className="label-cell">DESC</td>
+                        <td className="value-cell">{sample.description}</td>
+                    </tr>
+                    {isDetail && (
+                        <tr>
+                            <td className="line-number">03</td>
+                            <td className="label-cell">MEDIA</td>
+                            <td className="value-cell">
+                                {sample.videoIds.map((videoId, index) => (
+                                    <div key={videoId} className="youtube-embed-container" style={index > 0 ? { marginTop: "1rem" } : {}}>
+                                        <YouTube 
+                                            videoId={videoId} 
+                                            opts={opts(index === 0 && sample.autoplayFirst)} 
+                                            className="youtube-embed-video"
+                                        />
+                                    </div>
+                                ))}
+                            </td>
+                        </tr>
+                    )}
+                </tbody>
+            </table>
+        </div>
+    );
+}
+
+export const Samples = () => {
+    const { sampleId } = useParams();
+
+    if (sampleId) {
+        const sample = samplesData.find(s => s.id === sampleId);
+        if (!sample) return <div>Sample not found</div>;
+        return (
+            <div>
+                <div style={{ marginBottom: '2rem' }}>
+                    <Link to="/samples" className="custom-link" style={{ fontSize: '0.8rem' }}>
+                        [ BACK TO SAMPLES ]
+                    </Link>
+                </div>
+                <SampleCard sample={sample} isDetail={true} />
+            </div>
+        );
+    }
 
     return (
         <div>
-            {/*Hex Visualizer*/}
-            <div className="card">
-                <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
-                    <h2>Hex Visualizer</h2>
-                    <p>Leveraging DOTS and signal processing to make pretty things to look at</p>
-                    <div className={youtubeEmbedContainer}>
-                        <YouTube videoId="8QoQzeEf6jY" opts={opts} className={youtubeEmbedVideo}/>
-                    </div>
-                    <div style={{marginTop: "1rem", width: "100%"}} className={youtubeEmbedContainer}>
-                        <YouTube videoId="oBIULjBv9Bs" opts={opts_no_autoplay} className={youtubeEmbedVideo}/>
-                    </div>
-                </div>
-            </div>
-
-            {/*GasGun*/}
-            <div className="card">
-                <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
-                    <h2>GasGun</h2>
-                    <p>A highly customizable gun-based game using the gameplay ability system</p>
-                    <div className={youtubeEmbedContainer}>
-                        <YouTube videoId="SkMGIFy6trA" opts={opts_no_autoplay} className={youtubeEmbedVideo}/>
-                    </div>
-                </div>
-            </div>
-
-            {/*HallCrawl*/}
-            <div className="card">
-                <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
-                    <h2>HallCrawl</h2>
-                    <p>A simple shooter game I'm building to improve my UE5 knowledge base</p>
-                    <div className={youtubeEmbedContainer}>
-                        <YouTube videoId="7pfnAtpJf9U" opts={opts_no_autoplay} className={youtubeEmbedVideo}/>
-                    </div>
-                </div>
-            </div>
-
-            {/*Nisgab*/}
-            <div className="card">
-                <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
-                    <h2>Nisgab</h2>
-                    <p>A simple code generation tool for automatically generating global action bindings for unity's input system</p>
-                    <div className={youtubeEmbedContainer}>
-                        <YouTube videoId="SyeoqOclxF4" opts={opts_no_autoplay} className={youtubeEmbedVideo}/>
-                    </div>
-                </div>
-            </div>
-
-            {/*Logician*/}
-            <div className="card">
-                <div style={{display: "flex", flexDirection: "column", marginLeft: "0"}}>
-                    <div>
-                        <h2>The Logician</h2>
-                        <p>FIEA capstone project that I pitched and was a core developer on over a 9 month period</p>
-                    </div>
-                    <div className={youtubeEmbedContainer}>
-                        <YouTube videoId="QeR5xUprkFI" opts={opts_no_autoplay} className={youtubeEmbedVideo}/>
-                    </div>
-                </div>
+            <h1>Technical Samples</h1>
+            <p style={{ marginBottom: '2rem' }}>A collection of technical demonstrations and project highlights.</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                {samplesData.map(sample => (
+                    <SampleCard key={sample.id} sample={sample} />
+                ))}
             </div>
         </div>
     );
 };
 
-export class Samples extends Component {
-    static displayName = Samples.name;
-
-    render() {
-        return (
-            <div>
-                <h4>Some videos and embedded demos of my projects</h4>
-                <VideoEmbed/>
-            </div>
-        );
-    }
-}
+export default Samples;

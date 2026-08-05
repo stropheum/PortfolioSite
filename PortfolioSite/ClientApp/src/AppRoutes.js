@@ -12,8 +12,11 @@ const AppRoutes = [
     element: <Home />
   },
   {
-    index: true,
     path: '/samples',
+    element: <Samples />
+  },
+  {
+    path: '/samples/:sampleId',
     element: <Samples />
   },
   {

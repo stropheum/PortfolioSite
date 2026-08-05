@@ -1,132 +1,139 @@
 import React, {Component} from 'react';
 import './Links.css';
+import './Samples.css';
+
+const ProjectTable = ({ id, title, link, description }) => {
+    return (
+        <div id={id} className="sample-table-container">
+            <table className="sample-table">
+                <tbody>
+                    <tr>
+                        <td className="line-number">01</td>
+                        <td className="label-cell">PROJECT</td>
+                        <td className="value-cell">
+                            <a href={link} target="_blank" rel="noopener noreferrer" className="custom-link">
+                                {title}
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="line-number">02</td>
+                        <td className="label-cell">DESC</td>
+                        <td className="value-cell">{description}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    );
+};
 
 export class Github extends Component {
     static displayName = Github.name;
 
     render() {
+        const projects = [
+            {
+                id: "gasgun",
+                title: "GasGun",
+                link: "https://github.com/stropheum/GasGun",
+                description: "Leveraging DOTS, signal processing, visual effects and shaders to make pretty abstract scenes"
+            },
+            {
+                id: "hexvisualizer",
+                title: "Hex Visualizer",
+                link: "https://github.com/stropheum/HexVisualizer",
+                description: "Leveraging DOTS, signal processing, visual effects and shaders to make pretty abstract scenes"
+            },
+            {
+                id: "snap",
+                title: "Snap",
+                link: "https://github.com/stropheum/Snap",
+                description: "Attempting to recreate Marvel Snap as a technical study in Unity"
+            },
+            {
+                id: "d-squared-engine",
+                title: "D-Squared Engine",
+                link: "https://github.com/stropheum/D-Squared-Engine",
+                description: "A custom game engine with a flexible XML scripting language, support for DirectX, OpenGL, and Vulkan. Originally a semester-long project at FIEA, under the discerning eye of Paul Varcholik."
+            },
+            {
+                id: "hivemind",
+                title: "Hivemind",
+                link: "https://github.com/stropheum/Hivemind",
+                description: "A bee colony simulation I wrote, utilizing the Artificial Bee Colony algorithm. Used to demonstrate emergent cooperative behavior."
+            },
+            {
+                id: "voicemeter",
+                title: "VoiceMeter",
+                link: "https://github.com/stropheum/VoiceMeter",
+                description: "A stream overlay tool to hook into a discord voice channel and monitor voice activity, relaying real-time conversational data."
+            },
+            {
+                id: "crackhud",
+                title: "CrackHud",
+                link: "https://github.com/stropheum/CrackHud",
+                description: "An augmented reality tool that recognizes card faces and looks up secondary market values."
+            },
+            {
+                id: "voxel-terrain-generator",
+                title: "Voxel Terrain Generator",
+                link: "https://github.com/stropheum/Voxel-Terrain-Generator",
+                description: "A voxel terrain generation tool with configurable chunk sizes, proximity generation, and mesh optimization."
+            },
+            {
+                id: "rts",
+                title: "RTS Project",
+                link: "https://github.com/stropheum/RTS",
+                description: "A foundation for Unreal Engine skill building and exploration, with the goal of a simple functional RTS game."
+            },
+            {
+                id: "portfoliosite",
+                title: "Personal Portfolio Website",
+                link: "https://github.com/stropheum/PortfolioSite",
+                description: "I wrote this website, hosted it on Github pages, and I'm linking here back to the Github project itself."
+            },
+            {
+                id: "deformablemesh",
+                title: "Deformable Mesh",
+                link: "https://github.com/stropheum/DeformableMesh",
+                description: "A procedural mesh project where the user can deform a mesh with mouse interaction, with a self-healing mesh."
+            }
+        ];
+
         return (
             <div>
-                <div className="card">
-                    <h1>
-                        <a href="https://github.com/stropheum" target="_blank" rel="noopener noreferrer"
-                           className="custom-link">
-                            Github Profile
-                        </a>
-                    </h1>
-                    <p>My Github Profile. Where I host personal passion projects, potential solo endeavors, and technical
-                        studies that I use as artifacts of my personal growth.</p>
+                <div className="sample-table-container">
+                    <table className="sample-table">
+                        <tbody>
+                            <tr>
+                                <td className="line-number">00</td>
+                                <td className="label-cell">PROFILE</td>
+                                <td className="value-cell">
+                                    <a href="https://github.com/stropheum" target="_blank" rel="noopener noreferrer" className="custom-link">
+                                        Github Profile
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="line-number">01</td>
+                                <td className="label-cell">SUMMARY</td>
+                                <td className="value-cell">
+                                    My Github Profile. Where I host personal passion projects, potential solo endeavors, and technical studies.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                
-                <div className="card">
-                    <a href="https://https://github.com/stropheum/GasGun" target="_blank" rel="noopener noreferrer"
-                       className="custom-link">
-                        GasGun
-                    </a>
-                    <p>Leveraging DOTS, signal processing, visual effects and shaders to make pretty abstract scenes</p>
-                </div>
-                
-                <div className="card">
-                    <a href="https://github.com/stropheum/HexVisualizer" target="_blank" rel="noopener noreferrer"
-                       className="custom-link">
-                        Hex Visualizer
-                    </a>
-                    <p>Leveraging DOTS, signal processing, visual effects and shaders to make pretty abstract scenes</p>
-                </div>
-                
-                <div className="card">
-                    <a href="https://github.com/stropheum/Snap" target="_blank" rel="noopener noreferrer"
-                       className="custom-link">
-                        Snap
-                    </a>
-                    <p>Attempting to recreate Marvel Snap as a technical study in Unity</p>
-                </div>
-                
-                <div className="card">
-                    <a href="https://github.com/stropheum/D-Squared-Engine" target="_blank" rel="noopener noreferrer"
-                       className="custom-link">
-                        D-Squared Engine
-                    </a>
-                    <p>A custom game engine with a flexible XML scripting language, support for DirectX, OpenGL, and Vulkan.
-                        Originally a semester-long project at FIEA, under the discerning eye of Paul Varcholik, I took a lot
-                        of pride in this project and while originally infuriating, the oddball XML scripting language really
-                        opened my eyes to what a game engine is and can be, as well as how much of a nightmare it can be
-                        trying to create a unified experience across multiple graphical frameworks. DirectX makes me
-                        sad.</p>
-                </div>
-                
-                <div className="card">
-                    <a href="https://github.com/stropheum/Hivemind" target="_blank" rel="noopener noreferrer"
-                       className="custom-link">
-                        Hivemind
-                    </a>
-                    <p>A bee colony simulation I wrote, utilizing the Artificial Bee Colony algorithm (developed by
-                        Karaboga to optimize server selection based on observing bee food source selection behavior).
-                        Used to demonstrate the theory that through no direct inter-hive communication, hives that
-                        otherwise should starve out competitors will instead have emergent cooperative behavior</p>
-                </div>
-                
-                <div className="card">
-                    <a href="https://github.com/stropheum/VoiceMeter" target="_blank" rel="noopener noreferrer"
-                       className="custom-link">
-                        VoiceMeter
-                    </a>
-                    <p>A stream overlay tool I've developed to hook into a discord voice channel and monitor voice
-                        activity. The bot relays information to the overlay and displays real time conversational data
-                        such as time equity (% of total conversation spent yapping), longest contiguous segment (biggest
-                        yap),
-                        longest uninterrupted segment (biggest polite yap), as well as a live feed of participants vocal
-                        streams.</p>
-                </div>
-                
-                <div className="card">
-                    <a href="https://github.com/stropheum/CrackHud" target="_blank" rel="noopener noreferrer"
-                       className="custom-link">
-                        CrackHud
-                    </a>
-                    <p>An augmented reality tool I developed with the intention to market to magic the gathering pack
-                        openers. The tool recognizes the card faces, looks up the secondary market value of the card, as
-                        well
-                        as market trend data.</p>
-                </div>
-                
-                <div className="card">
-                    <a href="https://github.com/stropheum/Voxel-Terrain-Generator" target="_blank" rel="noopener noreferrer"
-                       className="custom-link">
-                        Voxel Terrain Generator
-                    </a>
-                    <p>This is a voxel terrain generation tool I wrote in Unity as a challenge. Using Minecraft as
-                        inspiration, I wrote a generation tool that has configurable chunk sizes, as well as configurable
-                        proximity generation, and mesh optimization.</p>
-                </div>
-                
-                <div className="card">
-                    <a href="https://github.com/stropheum/RTS" target="_blank" rel="noopener noreferrer"
-                       className="custom-link">
-                        RTS Project
-                    </a>
-                    <p>This is a slow-going RTS project I'm using as a foundation for Unreal Engine skill building and exploration.
-                        The end goal is to have a simple functional RTS game with editor tools such as a map editor</p>
-                </div>
-                
-                <div className="card">
-                    <a href="https://github.com/stropheum/PortfolioSite" target="_blank" rel="noopener noreferrer"
-                       className="custom-link">
-                        Personal Portfolio Website
-                    </a>
-                    <p>I wrote this website, hosted it on Github pages, and I'm linking here back to the
-                        Github project itself. This is my first foray into React, so judge me gently.</p>
-                </div>
-                
-                <div className="card">
-                    <a href="https://github.com/stropheum/DeformableMesh" target="_blank" rel="noopener noreferrer"
-                       className="custom-link">
-                        Deformable Mesh
-                    </a>
-                    <p>A procedural mesh project using Unity and deployed to WebGL, where the user can deform a mesh with 
-                    mouse interaction, with a simple shader that augments color gradient and emission based on depth.
-                    Mesh also self-heals over time</p>
-                </div>
+
+                {projects.map((project) => (
+                    <ProjectTable 
+                        key={project.id}
+                        id={project.id}
+                        title={project.title}
+                        link={project.link}
+                        description={project.description}
+                    />
+                ))}
             </div>
         );
     }
