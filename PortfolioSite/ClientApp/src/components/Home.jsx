@@ -8,13 +8,16 @@ export class Home extends Component {
     render() {
         return (
             <div>
-                <h1>Dale Diaz</h1>
-                <h3>Senior Game Programmer | Unity Expert | Polymath | Lifetime Learner</h3>
-                <hr/>
-                {/*<Card title="test">*/}
-                {/*</Card>*/}
+                <div style={{ marginBottom: '4rem' }}>
+                    <h1 style={{ fontSize: '4rem', fontWeight: '900', margin: '0', lineHeight: '1' }}>DALE DIAZ</h1>
+                    <h1 style={{ fontSize: '3rem', fontWeight: '900', margin: '0', lineHeight: '1', color: 'var(--accent-color)' }}>CODE IS MY BRUSH</h1>
+                    <p style={{ fontSize: '1.2rem', marginTop: '2rem', maxWidth: '600px' }}>
+                        Senior Game Programmer | Unity Expert | Polymath | Lifetime Learner
+                    </p>
+                </div>
+
                 <div className="card">
-                    <h1 align="center">About Me</h1>
+                    <h1>About Me</h1>
                     <p>
                         I’m a game programmer who thrives at the intersection of art, science, and problem-solving.
                         My academic journey began in sound recording technology, where I explored the rich interplay between
@@ -42,13 +45,12 @@ export class Home extends Component {
                         with creative vision.
                     </p>
                 </div>
-                <hr />
                 <div className="card">
+                    <h1>Github Activity</h1>
                     <GithubCalendar username="Stropheum" />
                 </div>
-                <hr/>
                 <div className="card">
-                    <h1 align="center">Credited Titles</h1>
+                    <h1>Credited Titles</h1>
                     <LogoGrid/>
                 </div>
             </div>

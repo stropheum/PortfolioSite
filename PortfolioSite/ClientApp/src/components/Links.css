@@ -1,8 +1,12 @@
 .custom-link {
-    color: darkcyan;
+    color: var(--accent-color);
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .custom-link:hover {
-    text-decoration: underline;
+    color: var(--header-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-color);
 }

@@ -1,99 +1,33 @@
-﻿.card
-{
-    box-sizing: content-box;
-    margin: 0 auto;
-    padding: 2em;
-    width: auto;
-    background: #001818;
-    text-align: center;
-    border-radius: 10px;
+﻿.card, .card-no-alignment {
+    box-sizing: border-box;
+    margin: 2rem 0;
+    padding: 2rem;
+    width: 100%;
+    background: var(--bg-color);
+    text-align: left;
+    border: 1px solid var(--border-color);
     position: relative;
-    opacity: 100%;
-    overflow: visible;
+    border-radius: 0;
 }
 
-@property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
+.card:hover, .card-no-alignment:hover {
+    border-color: var(--accent-color);
 }
 
-.card::after, .card::before {
-    --border-width: 8px;
-    content: '';
-    position: absolute;
-    height: calc(100% + var(--border-width));
-    width: calc(100% + var(--border-width));
-    background: conic-gradient(from var(--angle), cyan, transparent, cyan, transparent, cyan, transparent, cyan);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    padding: 0;
-    border-radius: 10px;
-    animation: 7s spin linear infinite;
+.card h1, .card-no-alignment h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--header-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
 }
 
-.card::after {
-    z-index: -1;
-    opacity: 100%;
+.card p, .card-no-alignment p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
 }
 
-.card::before {
-    z-index: -2;
-    filter: blur(1.5rem);
-    opacity: 0.25;
-}
-
-.card-no-alignment
-{
-    box-sizing: content-box;
-    margin: 0 auto;
-    padding: 2em;
-    width: auto;
-    background: #001818;
-    border-radius: 10px;
-    position: relative;
-    opacity: 100%;
-    overflow: visible;
-}
-
-@property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
-
-.card-no-alignment::after, .card-no-alignment::before {
-    --border-width: 8px;
-    content: '';
-    position: absolute;
-    height: calc(100% + var(--border-width));
-    width: calc(100% + var(--border-width));
-    background: conic-gradient(from var(--angle), cyan, transparent, cyan, transparent, cyan, transparent, cyan);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    padding: 0;
-    border-radius: 10px;
-    animation: 7s spin linear infinite;
-}
-
-.card-no-alignment::after {
-    z-index: -1;
-    opacity: 100%;
-}
-
-.card-no-alignment::before {
-    z-index: -2;
-    filter: blur(1.5rem);
-    opacity: 0.25;
-}
-
-@keyframes spin {
-    from {
-        --angle: 0deg;
-    }
-    to {
-        --angle: 360deg;
-    }
+.card::after, .card::before, .card-no-alignment::after, .card-no-alignment::before {
+    display: none;
 }

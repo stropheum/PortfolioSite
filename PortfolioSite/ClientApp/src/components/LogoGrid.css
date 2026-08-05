@@ -1,16 +1,23 @@
 .logo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid */
-    gap: 16px; /* Spacing between grid items */
-    justify-items: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    padding: 16px; /* Optional padding around the grid */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 .logo {
-    max-width: 100%; /* Prevent logos from exceeding their container */
-    max-height: 120px; /* Limit the height of logos */
-    object-fit: contain; /* Preserve aspect ratio */
-    border-radius: 8px; /* Optional: Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+    max-width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    background-color: #1a1a1a;
+}
+
+.logo:hover {
+    border-color: var(--accent-color);
 }

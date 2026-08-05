@@ -1,23 +1,66 @@
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
+
+:root {
+  --bg-color: #0e0e0e;
+  --text-color: #cccccc;
+  --header-color: #ffffff;
+  --accent-color: #ff5f33;
+  --border-color: #333333;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--header-color);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
 code {
-  color: #E01A76;
+  color: var(--accent-color);
+  font-family: var(--font-mono);
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  border-radius: 0;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  font-weight: bold;
 }
- 
-body {
-  background-color: #18181800;
-  color: #EAEAEA; 
+
+.btn-primary:hover {
+  background-color: var(--header-color);
+  border-color: var(--header-color);
+  color: var(--bg-color);
+}
+
+hr {
+  border-top: 1px solid var(--border-color);
+  opacity: 1;
+}
+
+.container {
+  max-width: 1000px;
 }
