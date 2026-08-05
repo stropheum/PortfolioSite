@@ -13,9 +13,9 @@ export const NavMenu = () => {
   const navigate = useNavigate();
 
   const themes = [
-    { id: 'default', name: 'EMBER', color: '#ff5f33' },
+    { id: 'default', name: 'COBALT', color: '#64ffda' },
     { id: 'matrix', name: 'PHOSPHOR', color: '#00ff41' },
-    { id: 'cobalt', name: 'COBALT', color: '#64ffda' },
+    { id: 'ember', name: 'EMBER', color: '#ff5f33' },
     { id: 'crimson', name: 'CRIMSON', color: '#ff3333' },
     { id: 'gold', name: 'GOLD', color: '#ffcc33' },
     { id: 'amethyst', name: 'AMETHYST', color: '#bf94ff' },

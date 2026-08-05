@@ -4,11 +4,11 @@
   --bg-color: #121212;
   --bg-table: #0b0b0b;
   --bg-light: #1a1a1a;
-  --text-color: #cccccc;
-  --header-color: #ffffff;
-  --accent-color: #ff5f33;
-  --accent-rgb: 255, 95, 51;
-  --border-color: #333333;
+  --text-color: #8892b0;
+  --header-color: #ccd6f6;
+  --accent-color: #64ffda;
+  --accent-rgb: 100, 255, 218;
+  --border-color: #233554;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
 }
 
@@ -20,12 +20,12 @@
   --border-color: #003b00;
 }
 
-[data-theme='cobalt'] {
-  --text-color: #8892b0;
-  --header-color: #ccd6f6;
-  --accent-color: #64ffda;
-  --accent-rgb: 100, 255, 218;
-  --border-color: #233554;
+[data-theme='ember'] {
+  --text-color: #cccccc;
+  --header-color: #ffffff;
+  --accent-color: #ff5f33;
+  --accent-rgb: 255, 95, 51;
+  --border-color: #333333;
 }
 
 [data-theme='crimson'] {
