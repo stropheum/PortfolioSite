@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import LogoGrid from "./LogoGrid";
 import GithubCalendar from "./GithubCalendar";
+import Typewriter from "./Typewriter";
 import './Samples.css';
 
 export class Home extends Component {
@@ -11,9 +12,11 @@ export class Home extends Component {
             <div>
                 <div style={{ marginBottom: '4rem' }}>
                     <h1 style={{ fontSize: '4rem', fontWeight: '900', margin: '0', lineHeight: '1' }}>DALE DIAZ</h1>
-                    <h1 style={{ fontSize: '3rem', fontWeight: '900', margin: '0', lineHeight: '1', color: 'var(--accent-color)' }}>CONVERGENCE OF ART AND SYNTAX</h1>
-                    <p style={{ fontSize: '1.2rem', marginTop: '2rem', maxWidth: '100%' }}>
-                        Senior Game Programmer | Unity Expert | Polymath | Lifetime Learner
+                    <h1 style={{ fontSize: '3rem', fontWeight: '900', margin: '0', lineHeight: '1', color: 'var(--accent-color)' }}>
+                        CONVERGENCE OF ART AND SYNTAX
+                    </h1>
+                    <p style={{ fontSize: '1.2rem', marginTop: '2rem', maxWidth: '100%', minHeight: '1.5em' }}>
+                        <Typewriter elements={["SENIOR PROGRAMMER", "GAMEPLAY PROGRAMMING", "AI SYSTEMS", "PROCEDURAL GENERATION", "NETWORK PROGRAMMING", "AUTOMATION", "TOOLING", "UNITY EXPERTISE", "MUSIC PRODUCTION", "POLYMATH", "LIFETIME LEARNER"]} />
                     </p>
                 </div>
 
