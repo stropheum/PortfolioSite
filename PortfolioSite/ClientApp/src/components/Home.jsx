@@ -13,11 +13,18 @@ export class Home extends Component {
                 <div style={{ marginBottom: '4rem' }}>
                     <h1 style={{ fontSize: '4rem', fontWeight: '900', margin: '0', lineHeight: '1' }}>DALE DIAZ</h1>
                     <h1 style={{ fontSize: '3rem', fontWeight: '900', margin: '0', lineHeight: '1', color: 'var(--accent-color)' }}>
-                        CONVERGENCE OF ART AND SYNTAX
+                        COMBINING EXPRESSION AND SYNTAX
                     </h1>
-                    <p style={{ fontSize: '1.2rem', marginTop: '2rem', maxWidth: '100%', minHeight: '1.5em' }}>
-                        <Typewriter elements={["SENIOR PROGRAMMER", "GAMEPLAY PROGRAMMING", "AI SYSTEMS", "PROCEDURAL GENERATION", "NETWORK PROGRAMMING", "AUTOMATION", "TOOLING", "UNITY EXPERTISE", "MUSIC PRODUCTION", "POLYMATH", "LIFETIME LEARNER"]} />
-                    </p>
+                    <div className="repl-window">
+                        <div className="repl-header">
+                            <span>capabilities</span>
+                            <span style={{ opacity: 0.5 }}>exe</span>
+                        </div>
+                        <div className="repl-body">
+                            <span className="repl-prompt">></span>
+                            <Typewriter elements={["SENIOR PROGRAMMER", "GAMEPLAY PROGRAMMING", "AI SYSTEMS", "PROCEDURAL GENERATION", "NETWORK PROGRAMMING", "AUTOMATION", "TOOLING", "UNITY EXPERTISE", "MUSIC PRODUCTION", "POLYMATH", "LIFETIME LEARNER"]} />
+                        </div>
+                    </div>
                 </div>
 
                 <div id="about" className="sample-table-container">
