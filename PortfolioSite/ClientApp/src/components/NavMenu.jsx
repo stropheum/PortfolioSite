@@ -138,7 +138,9 @@ export const NavMenu = () => {
     }
   };
 
-  return (
+  const currentThemeColor = themes.find(t => t.id === currentTheme)?.color.replace('#', '') || '64ffda';
+
+    return (
     <nav className="sidebar">
       <div className="sidebar-header">
         <div className="sidebar-brand">DALE DIAZ</div>
@@ -216,11 +218,11 @@ export const NavMenu = () => {
                   <iframe 
                     title={track.title}
                     width="100%" 
-                    height="120" 
+                    height="160" 
                     scrolling="no" 
                     frameBorder="no" 
                     allow="autoplay" 
-                    src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(track.url)}&color=ff5f33&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false`}
+                    src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(track.url)}&color=${currentThemeColor}&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true`}
                   />
                 </div>
               </div>
