@@ -212,16 +212,17 @@ export const NavMenu = () => {
           <div className="sidebar-tracks">
             {tracksData.map(track => (
               <div key={track.id} className="sidebar-track">
-                <iframe 
-                  title={track.title}
-                  width="100%" 
-                  height="120" 
-                  scrolling="no" 
-                  frameBorder="no" 
-                  allow="autoplay" 
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(track.url)}&color=ff5f33&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false`}
-                />
+                <div className="iframe-wrapper">
+                  <iframe 
+                    title={track.title}
+                    width="100%" 
+                    height="120" 
+                    scrolling="no" 
+                    frameBorder="no" 
+                    allow="autoplay" 
+                    src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(track.url)}&color=ff5f33&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false`}
+                  />
+                </div>
               </div>
             ))}
           </div>

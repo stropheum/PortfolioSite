@@ -202,6 +202,10 @@ html {
   display: block;
 }
 
+.iframe-wrapper {
+  filter: invert(100%) hue-rotate(180deg) brightness(0.8) contrast(1.2);
+}
+
 .sub-link {
   font-size: 0.8rem !important;
   padding: 0.3rem 0.5rem !important;
