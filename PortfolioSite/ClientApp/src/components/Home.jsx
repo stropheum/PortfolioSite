@@ -90,6 +90,7 @@ export class Home extends Component {
 
                 <div className="home-side-col">
                     <div className="side-sticky">
+
                         <div id="credited-titles" className="side-nav-section">
                             <div className="side-nav-title">CREDITED TITLES</div>
                             <LogoGrid />

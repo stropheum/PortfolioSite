@@ -139,42 +139,6 @@
     background-color: var(--accent-color);
 }
 
-/* Side Windows */
-.side-window {
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-table);
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.side-window-header {
-    border-bottom: 1px solid var(--border-color);
-    padding: 0.4rem 0.6rem;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.6rem;
-    color: var(--text-color);
-    opacity: 0.5;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.side-window-body {
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 140px;
-}
-
-.side-window-footer {
-    border-top: 1px solid var(--border-color);
-    padding: 0.3rem 0.6rem;
-    font-size: 0.6rem;
-    color: var(--accent-color);
-    opacity: 0.8;
-}
 
 @media (max-width: 1200px) {
     .home-layout {

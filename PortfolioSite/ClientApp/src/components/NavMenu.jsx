@@ -138,8 +138,6 @@ export const NavMenu = () => {
     }
   };
 
-  const currentThemeColor = themes.find(t => t.id === currentTheme)?.color.replace('#', '') || '64ffda';
-
     return (
     <nav className="sidebar">
       <div className="sidebar-header">
@@ -213,8 +211,12 @@ export const NavMenu = () => {
           <div className="sidebar-label">MY MUSIC</div>
           <div className="sidebar-tracks">
             {tracksData.map(track => (
-              <div key={track.id} className="sidebar-track">
-                <div className="iframe-wrapper">
+              <div className="side-window" key={track.id}>
+                <div className="side-window-header">
+                  <span>{track.title}</span>
+                  <span style={{ opacity: 0.5 }}>wav</span>
+                </div>
+                <div className="side-window-body" style={{ padding: 0, minHeight: '160px' }}>
                   <iframe 
                     title={track.title}
                     width="100%" 
@@ -222,8 +224,12 @@ export const NavMenu = () => {
                     scrolling="no" 
                     frameBorder="no" 
                     allow="autoplay" 
-                    src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(track.url)}&color=${currentThemeColor}&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true`}
+                    src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(track.url)}&color=64ffda&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true`}
+                    style={{ display: 'block', filter: 'grayscale(0.1) brightness(0.8)' }}
                   />
+                </div>
+                <div className="side-window-footer">
+                  SOUNDCLOUD_PLAYER.EXE
                 </div>
               </div>
             ))}

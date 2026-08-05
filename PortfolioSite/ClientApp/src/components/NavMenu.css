@@ -181,42 +181,6 @@ html {
   margin-top: 0.5rem;
 }
 
-.sidebar-track {
-  border: 1px solid var(--border-color);
-  padding: 0;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-  height: 160px;
-  border-radius: 4px;
-  background-color: var(--bg-light);
-  position: relative;
-}
-
-.sidebar-track:hover {
-  border-color: var(--accent-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.sidebar-track iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.iframe-wrapper {
-  opacity: 0.7;
-  filter: grayscale(0.4) brightness(0.9);
-  transition: all 0.4s ease;
-  height: 100%;
-}
-
-.sidebar-track:hover .iframe-wrapper {
-  opacity: 1;
-  filter: grayscale(0) brightness(1);
-}
-
 .sub-link {
   font-size: 0.8rem !important;
   padding: 0.3rem 0.5rem !important;
