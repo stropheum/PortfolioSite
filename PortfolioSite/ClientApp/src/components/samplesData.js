@@ -18,7 +18,14 @@ export const samplesData = [
         title: 'Hex Visualizer',
         description: 'Leveraging DOTS and signal processing to make pretty things to look at',
         videoIds: ['8QoQzeEf6jY'],
-        autoplayFirst: false
+        autoplayFirst: true
+    },
+    {
+        id: 'crackhud',
+        title: 'CrackHud',
+        description: 'Leveraged Vuforia XR package to develop a proof of concept prototype for real-time market data lookup of Magic: The Gathering trading cards',
+        videoIds: ['fEi25-nNusY', 'c9ZqJQRUDvY'],
+        autoplayFirst: true
     },
     {
         id: 'waveform-visualizer',
@@ -32,27 +39,27 @@ export const samplesData = [
         title: 'GasGun',
         description: 'A highly customizable gun-based game using the gameplay ability system',
         videoIds: ['SkMGIFy6trA'],
-        autoplayFirst: false
+        autoplayFirst: true
     },
     {
         id: 'hallcrawl',
         title: 'HallCrawl',
         description: 'A simple shooter game I\'m building to improve my UE5 knowledge base',
         videoIds: ['7pfnAtpJf9U'],
-        autoplayFirst: false
+        autoplayFirst: true
     },
     {
         id: 'nisgab',
         title: 'Nisgab',
         description: 'A simple code generation tool for automatically generating global action bindings for unity\'s input system',
         videoIds: ['SyeoqOclxF4'],
-        autoplayFirst: false
+        autoplayFirst: true
     },
     {
         id: 'logician',
         title: 'The Logician',
         description: 'FIEA capstone project that I pitched and was a core developer on over a 9 month period',
         videoIds: ['QeR5xUprkFI'],
-        autoplayFirst: false
+        autoplayFirst: true
     }
 ];
