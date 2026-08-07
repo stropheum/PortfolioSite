@@ -1,10 +1,24 @@
 export const samplesData = [
     {
+        id: 'husky',
+        title: 'Husky Drinktech',
+        description: 'Working with the Husky brand to showcase new plastic products in their rPET line with bespoke interactive display installations',
+        videoIds: ['h3JN-SxqQH4', '0T8w-2jBg6Q'],
+        autoplayFirst: true
+    },
+    {
+        id: 'leidos',
+        title: 'Leidos',
+        description: 'Working with the Leidos brand to showcase new defense capability technology for their MDO line in a unique "pillar" display using a synchronized multi-camera rig to maintain cohesive perspective across the visual slices',
+        videoIds: ['khCQfChptx0'],
+        autoplayFirst: true
+    },
+    {
         id: 'hex-visualizer',
         title: 'Hex Visualizer',
         description: 'Leveraging DOTS and signal processing to make pretty things to look at',
         videoIds: ['8QoQzeEf6jY'],
-        autoplayFirst: true
+        autoplayFirst: false
     },
     {
         id: 'waveform-visualizer',
